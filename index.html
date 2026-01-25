@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa - Pusat Tautan Resmi</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .parallax-bg {
+            position: fixed;
+            top: -10%;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://files.useyapi.com/projects/jYaWDB-0iSo0DPGsRZWnO/uploads/c76e1648-38df-49e8-978f-5493c2dfcfbd-1001926161.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            will-change: transform;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .main-content {
+            width: 100%;
+            max-width: 550px; 
+            text-align: center;
+            z-index: 1;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.8);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .avatar:hover {
+            transform: scale(1.1) rotate(3deg);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .header-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-card h1 {
+            font-size: 3.5rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #ffffff 0%, #999999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .header-card p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 2px;
+        }
+
+        .links-group {
+            display: grid;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.03);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        footer {
+            margin-top: auto;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            padding-bottom: 20px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
+        .delay-4 { transition-delay: 0.8s; }
+
+    
+        @media (max-width: 600px) {
+            .main-content {
+                max-width: 100%;
+            }
+            .header-card h1 {
+                font-size: 2.5rem;
+                letter-spacing: 5px;
+            }
+            .header-card {
+                padding: 25px;
+            }
+            .avatar {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header-card {
+                border-width: 1.5px;
+            }
+            .link-item {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax-bg" id="bg"></div>
+
+    <div class="wrapper">
+        <main class="main-content">
+            <img src="https://files.useyapi.com/projects/jYaWDB-0iSo0DPGsRZWnO/uploads/76b95c0f-3f3c-45a7-b38a-54ea45d240f0-1001917561.jpg" 
+                 alt="Nexa Avatar" 
+                 class="avatar reveal">
+            
+            <header class="header-card reveal delay-1">
+                <h1>Nexa</h1>
+                <p>Pusat Tautan Resmi Nexa</p>
+            </header>
+
+            <section class="links-group">
+                <a href="https://whatsapp.com/channel/0029Vb7TkCcD38CStrAMMb3N" class="link-item reveal delay-2" target="_blank">
+                    Saluran WhatsApp Nexa
+                </a>
+                <a href="https://chat.whatsapp.com/Figeaa78x9XAa6K6Wkd3d5?mode=gi_t" class="link-item reveal delay-3" target="_blank">
+                    Grup Bot Nexa
+                </a>
+            </section>
+
+            <footer class="reveal delay-4">
+                © 2026 Nexa Community
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            setTimeout(() => {
+                reveals.forEach(el => el.classList.add('active'));
+            }, 100);
+            
+            const bg = document.getElementById('bg');
+            window.addEventListener('scroll', () => {
+                const scrollValue = window.pageYOffset;
+                bg.style.transform = `translateY(${scrollValue * 0.3}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
